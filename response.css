@@ -1,0 +1,128 @@
+/* error */
+/*
+1. h1 로고 img 가 크기가 줄어들 때 줄바꿈 처리 된다.
+
+2. 화면 너비 줄일 때 슬라이드 내부, 앱솔루트 txt 영역 조정이 잘 안된다.
+
+3. 레이아웃 변경할 때 기존 flex 를 block 으로 바꾸고, 순서를 변경할 때
+ inline-block 등으로 처리가 안되는지?. html 구조를 따로 안빼도 기존꺼에서 변경할 수 있는 방법?
+
+*/
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  h1 {
+    width: 300px;
+  }
+
+  #nav ul {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #nav {
+    display: none;
+  }
+
+  #main {
+    height: 100%;
+  }
+
+  .inner-main {
+    display: block;
+  }
+
+  .main-slide-wrapper {
+    width: 100%;
+    height: 100%;
+    /* overflow: visible; */
+  }
+
+  .main-slide-txt {
+    padding: 20px;
+  }
+
+  .main-slide-txt br {
+    display: none;
+  }
+
+  .icon-box {
+    position: absolute;
+    bottom: 0;
+    font-size: 13px;
+    width: 185px;
+    height: 30px;
+  }
+
+  .bt-right-top {
+    display: none;
+  }
+
+  .bt-right-botttom {
+    padding-top: 0;
+    display: block;
+    /* justify-content: space-between; */
+  }
+
+  .bt-right-box01 {
+    margin-bottom: 33px;
+  }
+
+  .right {
+    display: none;
+    padding-left: 0;
+  }
+  .mo-right {
+    display: block;
+  }
+
+  .right-center {
+    display: none;
+  }
+
+  .mo-right-center {
+    display: block;
+    height: 100%;
+    margin-bottom: 15px;
+  }
+
+  .mo-right-tb {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .right-top {
+    width: 47%;
+    /* padding-right: 15px; */
+  }
+  .right-botttom {
+    width: 47%;
+    /* display: inline; */
+  }
+
+  #footer {
+    height: 100%;
+  }
+
+  .footer-inner {
+    display: block;
+  }
+
+  .mo-footer-lc {
+    display: flex;
+  }
+
+  .footer-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .sns {
+    display: none;
+  }
+
+  .mo-sns {
+    display: block;
+    padding: 20px 0 0 29px;
+  }
+}

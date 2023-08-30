@@ -58,10 +58,12 @@ img {
 }
 
 .inner-header {
-  width: 1342px;
+  width: 100%;
+  /* width: 1342px; */
   height: 100%;
   padding: 0 40px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -77,11 +79,11 @@ img {
 #nav {
   width: 100%;
   /* padding-left: 156px; */
-  /* padding-left: 58px; */
 }
 
 #nav ul {
-  /* width: 100%; */
+  /* width: 1342px; */
+  width: 1000px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -92,6 +94,10 @@ img {
   /* font-size: 7px; */
   font-weight: 500;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-icon {
+  cursor: pointer;
 }
 
 #main {
@@ -456,6 +462,30 @@ img {
   padding: 30px 25px 45px;
 }
 
+.mo-right {
+  display: none;
+}
+
+.mo-right-center {
+  display: none;
+  width: 100%;
+  color: #fff;
+  background-color: #ff565c;
+  padding: 30px 25px 35px;
+}
+
+.mo-right-center a {
+  /* display: block; */
+  /* width: 210px; */
+  height: 30px;
+  padding: 9px 32px;
+  text-align: center;
+  font-family: Oswald;
+  font-size: 16px;
+  border: 1px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+
 .right-center h3 {
   font-family: Oswald;
   font-size: 32px;
@@ -540,6 +570,10 @@ img {
   justify-content: space-between;
 }
 
+.mo-footer-lc {
+  display: flex;
+}
+
 #footer h1 {
   width: 100px;
   color: rgba(136, 136, 136, 0.651);
@@ -564,6 +598,21 @@ img {
 .f-menu a {
   display: block;
   font-family: "Oswald", sans-serif;
+}
+
+.mo-sns {
+  display: none;
+  text-align: right;
+}
+
+.mo-sns span {
+  color: #fff;
+}
+
+.mo-sns a {
+  display: inline-block;
+  padding-left: 20px;
+  color: #ccc;
 }
 
 .sns {
