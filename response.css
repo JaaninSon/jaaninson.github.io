@@ -3,6 +3,7 @@
 1. h1 로고 img 가 크기가 줄어들 때 줄바꿈 처리 된다.
 
 2. 화면 너비 줄일 때 슬라이드 내부, 앱솔루트 txt 영역 조정이 잘 안된다.
+    이미지 겹치지 않기.
 
 3. 레이아웃 변경할 때 기존 flex 를 block 으로 바꾸고, 순서를 변경할 때
  inline-block 등으로 처리가 안되는지?. html 구조를 따로 안빼도 기존꺼에서 변경할 수 있는 방법?
@@ -54,17 +55,55 @@
     height: 30px;
   }
 
+  .main-left-bottom {
+    overflow: hidden;
+  }
+
+  .bottom-left {
+    height: 100%;
+  }
+
+  .bt-left-contents {
+    /* padding: 0 27px; */
+    width: 100%;
+    display: inline-block;
+    /* justify-content:; */
+  }
+
+  .bt-num-contents {
+    width: 100%;
+    display: block;
+  }
+
+  .bt-num-contents li {
+    padding: 20px 27px;
+  }
+
+  .bt-num-contents span {
+    padding: 0 10px 0 5px;
+  }
+
   .bt-right-top {
     display: none;
+    width: 50%;
+    height: 100%;
   }
 
   .bt-right-botttom {
+    width: 50%;
+    height: 100%;
     padding-top: 0;
     display: block;
     /* justify-content: space-between; */
   }
 
   .bt-right-box01 {
+    margin-bottom: 33px;
+    height: 50%;
+  }
+
+  .bt-right-box02 {
+    height: 50%;
     margin-bottom: 33px;
   }
 
@@ -124,5 +163,100 @@
   .mo-sns {
     display: block;
     padding: 20px 0 0 29px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* .main-slide-wrapper {
+  } */
+
+  .inner-main {
+    padding: 20px;
+  }
+
+  .main-slide-txt:nth-child(3) p {
+    display: none;
+  }
+
+  .main-slide-btn {
+    display: none;
+  }
+
+  .bottom-right {
+    display: none;
+  }
+
+  .mo-right {
+    display: none;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .right-top {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .right-center {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  .right-center a {
+    padding: 15px 52px;
+  }
+
+  .right-botttom {
+    width: 100%;
+  }
+
+  .footer-inner {
+    padding: 40px 20px 50px 20px;
+  }
+  .copy {
+    padding-top: 20px;
+  }
+  .footer-right {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .subscribe {
+    padding-bottom: 20px;
+  }
+
+  .mo-sns {
+    display: block;
+    text-align: left;
+    padding: 0;
+  }
+
+  .footer-center {
+    display: none;
+  }
+
+  .mo-footer-center {
+    display: flex;
+  }
+
+  .f-menu {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .f-menu li {
+    padding: 30px 50px 10px 0;
+  }
+
+  .f-menu li a {
+    padding-bottom: 20px;
   }
 }

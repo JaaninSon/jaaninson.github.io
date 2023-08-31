@@ -315,7 +315,7 @@ img {
 
 .bt-right-botttom {
   position: relative;
-  padding-top: 33px;
+  padding: 33px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -520,6 +520,7 @@ img {
   width: 315px;
   height: 275px;
   background-color: rgb(12, 22, 41);
+  margin-bottom: 33px;
 }
 
 .right-bottom > img {
@@ -649,4 +650,8 @@ img {
   border: 0;
   font-family: "Oswald", sans-serif;
   color: #fff;
+}
+
+.mo-footer-center {
+  display: none;
 }
